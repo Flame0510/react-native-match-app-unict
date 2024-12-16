@@ -58,7 +58,7 @@ export default function MatchList({ type }: MatchListType) {
                             condition = author === currentAuthor;
                             break;
                         case "joined":
-                            condition = playersIn.includes(currentAuthor);
+                            condition = playersIn?.includes(currentAuthor);
                             break;
                     }
 
@@ -100,7 +100,7 @@ export default function MatchList({ type }: MatchListType) {
                                 <Text>{item.title}</Text>
                                 <Text>{getSportName(item.sport)}</Text>
                                 <Text>Difficoltà: {item.difficulty}</Text>
-                                <Text>Partecipanti: {item.playersIn.length}</Text>
+                                <Text>Partecipanti: {item.playersIn?.length}</Text>
                                 <Text>
                                     Data: {new Date(item.dateTime).toLocaleDateString()}
                                 </Text>
